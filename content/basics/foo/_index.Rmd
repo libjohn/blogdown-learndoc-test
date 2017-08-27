@@ -1,0 +1,41 @@
+---
+title: "foo test of Rmd within content-basics"
+date: 2017-08-26T19:23:48-04:00
+weight: 13
+---
+
+## We all know
+
+- apples
+- bannanas
+- oranges
+
+But do we know [links](http://google.com) ^[or long winded footnotes]
+
+[foo2.nb](foo2.nb)
+[foo22](foo2)
+
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(ggvis)
+```
+
+```{r}
+cars
+```
+
+```{r}
+
+cars %>% 
+  filter(speed == 20)
+  
+```
+
+
+
+```{r}
+cars %>% 
+  ggvis(~speed, ~dist)
+```
+
